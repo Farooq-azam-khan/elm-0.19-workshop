@@ -84,8 +84,7 @@ view model =
         ]
 
 
-{-| 👉 TODO: Replace this comment with a type annotation for `viewArticle`
--}
+viewArticle : Article -> Html Msg
 viewArticle article =
     div [ class "article-preview" ]
         [ h1 [] [ text article.title ]
@@ -94,8 +93,7 @@ viewArticle article =
         ]
 
 
-{-| 👉 TODO: Replace this comment with a type annotation for `viewBanner`
--}
+viewBanner : Html Msg
 viewBanner =
     div [ class "banner" ]
         [ div [ class "container" ]
@@ -105,8 +103,7 @@ viewBanner =
         ]
 
 
-{-| 👉 TODO: Replace this comment with a type annotation for `viewTag`
--}
+viewTag : String -> String -> Html Msg
 viewTag selectedTagName tagName =
     let
         otherClass =
