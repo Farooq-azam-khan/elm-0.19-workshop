@@ -45,7 +45,7 @@ type alias Msg =
     }
 
 
-update : Msg -> Model -> Model 
+update : Msg -> Model -> Model
 update msg model =
     if msg.description == "ClickedTag" then
         { model | selectedTag = msg.data }
@@ -57,7 +57,8 @@ update msg model =
 
 -- VIEW
 
-view : Model -> Html Msg 
+
+view : Model -> Html Msg
 view model =
     let
         articles =
