@@ -91,6 +91,7 @@ viewForm form =
 
                    💡 HINT: Look at how the Email input below does this. 👇
                 -}
+                , onInput EnterUsername
                 , value form.username
                 ]
                 []
@@ -143,6 +144,7 @@ type Msg
     | EnteredPassword String
     | CompletedRegister (Result Http.Error Viewer)
     | GotSession Session
+    | EnterUsername String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -150,6 +152,9 @@ update msg model =
     case msg of
         EnteredEmail email ->
             updateForm (\form -> { form | email = email }) model
+
+        EnterUsername usernm ->
+            updateForm (\form -> { form | username = usernm }) model
 
         EnteredPassword password ->
             updateForm (\form -> { form | password = password }) model
