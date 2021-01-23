@@ -7,13 +7,13 @@ import Html.Attributes exposing (..)
 viewTags tags =
     let
         renderedTags =
-            List.map viewTag tags 
+            List.map viewTag tags
     in
     div [ class "tag-list" ] renderedTags
 
 
 viewTag tagName =
-    button [class "tag-pill tag-default"] [text tagName]
+    button [ class "tag-pill tag-default" ] [ text tagName ]
 
 
 main =
